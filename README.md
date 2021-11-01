@@ -55,7 +55,7 @@ Installation How-to?
 	4. The current implementation was only tested on Ubuntu 20.04.
 	
 Below is the highlevel architecture diagram of the application:
-
+![Architecture](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/DataIngestion.drawio/NewClassifierArchitecture.png)
 
 Below are the sample sequence diagrams:
 
