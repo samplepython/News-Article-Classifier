@@ -58,7 +58,9 @@ Below is the highlevel architecture diagram of the application:
 ![Architecture](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/DataIngestion.drawio/NewClassifierArchitecture.png)
 
 Below are the sample sequence diagrams:
+Training Sequence Diagram:
 ![Training](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/Sequence/Sequence-Diagrams/training-news-sequence-diagram.png)
+Prediction Sequence Diagram:
 ![Predict_news](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/Sequence/Sequence-Diagrams/predict-news-sequence-diagram.png)
 
 Below are some of the sample output screens:
