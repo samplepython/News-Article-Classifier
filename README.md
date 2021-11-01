@@ -64,5 +64,8 @@ Prediction Sequence Diagram:
 ![Predict_news](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/Sequence/Sequence-Diagrams/predict-news-sequence-diagram.png)
 
 Below are some of the sample output screens:
-
+Prediction Result:
+![prediction_success](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/screenshots/SuccessPrediction.PNG)
+Retrain Result:
+![retrain success](https://github.com/samplepython/News-Article-Classifier/blob/main/documents/Week4/screenshots/retrain.PNG)
 
