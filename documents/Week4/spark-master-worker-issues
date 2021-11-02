@@ -1,0 +1,24 @@
+consumer_1       | 21/10/30 02:30:07 INFO StandaloneSchedulerBackend: Executor app-20211030020646-0000/10 removed: Command exited with code 1
+consumer_1       | 21/10/30 02:30:07 INFO BlockManagerMaster: Removal of executor 10 requested
+consumer_1       | 21/10/30 02:30:07 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asked to remove non-existent executor 10
+consumer_1       | 21/10/30 02:30:07 INFO BlockManagerMasterEndpoint: Trying to remove executor 10 from BlockManagerMaster.
+consumer_1       | 21/10/30 02:30:07 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20211030020646-0000/11 on worker-20211030020602-192.168.80.6-33667 (192.168.80.6:33667) with 2 core(s)
+consumer_1       | 21/10/30 02:30:07 INFO StandaloneSchedulerBackend: Granted executor ID app-20211030020646-0000/11 on hostPort 192.168.80.6:33667 with 2 core(s), 1024.0 MiB RAM
+consumer_1       | 21/10/30 02:30:08 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20211030020646-0000/11 is now RUNNING
+consumer_1       | 21/10/30 02:30:17 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:30:32 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:30:47 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:31:02 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:31:17 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:31:32 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:31:47 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:32:02 WARN TaskSchedulerImpl: Initial job has not accepted any resources; check your cluster UI to ensure that workers are registered and have sufficient resources
+consumer_1       | 21/10/30 02:32:15 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20211030020646-0000/11 is now EXITED (Command exited with code 1)
+consumer_1       | 21/10/30 02:32:15 INFO StandaloneSchedulerBackend: Executor app-20211030020646-0000/11 removed: Command exited with code 1
+consumer_1       | 21/10/30 02:32:15 INFO BlockManagerMaster: Removal of executor 11 requested
+consumer_1       | 21/10/30 02:32:15 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asked to remove non-existent executor 11
+consumer_1       | 21/10/30 02:32:15 INFO BlockManagerMasterEndpoint: Trying to remove executor 11 from BlockManagerMaster.
+consumer_1       | 21/10/30 02:32:15 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20211030020646-0000/12 on worker-20211030020602-192.168.80.6-33667 (192.168.80.6:33667) with 2 core(s)
+consumer_1       | 21/10/30 02:32:15 INFO StandaloneSchedulerBackend: Granted executor ID app-20211030020646-0000/12 on hostPort 192.168.80.6:33667 with 2 core(s), 1024.0 MiB RAM
+consumer_1       | 21/10/30 02:32:15 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20211030020646-0000/12 is now RUNNING
+

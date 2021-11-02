@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>{{t}}</title>
+		<!-- href="/static/assets/style.css"-->
+		<!-- static/images/news-background.jpg-->
+		<link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='assets/style.css')}}" >
+		<link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='assets/emoji.css')}}" >
+		<script src="{{ url_for('static',filename='assets/twemoji.min.js')}}"></script>  
+		<script src="{{ url_for('static',filename='assets/emoji.js')}}"></script>
+		<style>
+			body {
+			  background-image: url('');
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;  
+			  background-size: cover;
+			}
+			</style>
+	</head>
+<body>
+	<h1>{{ h }}</h1>	  
+		<form action="/action" method="POST">
+			<table>
+				<tr>
+					<hr></hr>
+				</tr>
+			</table>  
+			<table class="none">				
+				<tr>
+					<td>
+						<input type="radio" name="options" value="Single" checked>
+						<label for="single"> Single Url</label>
+					</td>					
+					<td>
+						<input type="radio" name="options" value="Batch"/>
+						<label for="batch"> Batch Mode</label>
+					</td>			
+				</tr>
+				<tr><td></td></tr>
+				<tr>
+					<td><b><big><label>Enter News Article URL:</label></big></b></td>
+				</tr>
+				<tr>
+				<td><input type="text" name="url" placeholder="Article Url" /></td>			
+				<td><button type="submit"> Classify </button></td>				
+				</tr>
+		</form>	
+		<table>
+			<hr>
+			<b>Predicted Category:</b>
+			<label style="color:red;font-weight: bold;">{{ todos_new["Category"] }}</label>
+		</hr>
+		</table>
+	</table>
+		<hr>
+		{% if todos[0] %}
+		<b><big style="color:rgb(27, 1, 1);">Prediction History</big></b><br/>
+			<table>
+				<tr id="row">
+					<th class="name">Source</th>
+					<th class="Category">Prediction Result</th>	    	
+				</tr>
+			{% for todo in todos %}
+				<tr class="datas">
+					<td class="name">{{ todo["name"] }}</td>
+					<td class="Category">{{ todo["Category"] }}</td>				
+				</tr>
+			{% endfor %}
+			</table>
+		{% else %}
+			<h4>No Previous results available.</h4>
+		{% endif %}
+		<hr/>    	
+	<script>
+	</script>
+</body>
+</html>

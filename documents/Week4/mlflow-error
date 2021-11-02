@@ -1,0 +1,134 @@
+1/10/31 03:32:50 WARN DAGScheduler: Broadcasting large task binary with size 12.1 MiB
+trainer_1        |               precision    recall  f1-score   support
+trainer_1        | 
+trainer_1        |          0.0       0.86      0.86      0.86       662
+trainer_1        |          1.0       0.83      0.83      0.83       571
+trainer_1        |          2.0       0.87      0.85      0.86       575
+trainer_1        |          3.0       0.92      0.95      0.94       556
+trainer_1        | 
+trainer_1        |     accuracy                           0.87      2364
+trainer_1        |    macro avg       0.87      0.87      0.87      2364
+trainer_1        | weighted avg       0.87      0.87      0.87      2364
+trainer_1        | 
+trainer_1        | INFO:     172.18.0.1:59336 - "POST /train_model HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application                                         
+trainer_1        | Traceback (most recent call last):
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 369, in run_asgi
+trainer_1        |     result = await app(self.scope, self.receive, self.send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+trainer_1        |     return await self.app(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 208, in __call__
+trainer_1        |     await super().__call__(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+trainer_1        |     await self.middleware_stack(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+trainer_1        |     raise exc from None
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+trainer_1        |     await self.app(scope, receive, _send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+trainer_1        |     raise exc from None
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+trainer_1        |     await self.app(scope, receive, sender)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 580, in __call__
+trainer_1        |     await route.handle(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 241, in handle
+trainer_1        |     await self.app(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 52, in app
+trainer_1        |     response = await func(request)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 219, in app
+trainer_1        |     raw_response = await run_endpoint_function(
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 154, in run_endpoint_function
+trainer_1        |     return await run_in_threadpool(dependant.call, **values)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/concurrency.py", line 40, in run_in_threadpool
+trainer_1        |     return await loop.run_in_executor(None, func, *args)
+trainer_1        |   File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+trainer_1        |     result = self.fn(*self.args, **self.kwargs)
+trainer_1        |   File "/app/trainer.py", line 60, in train_model
+trainer_1        |     pre_train_model(processed_df)
+trainer_1        |   File "/app/TrainModelUtility.py", line 82, in pre_train_model
+trainer_1        |     mlflow_fit_model(nb_pipeline, hashingTF, trainingData)
+trainer_1        |   File "/app/TrainModelUtility.py", line 15, in mlflow_fit_model
+trainer_1        |     with mlflow.start_run() as run:
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/tracking/fluent.py", line 150, in start_run
+trainer_1        |     active_run_obj = MlflowClient().create_run(
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/tracking/client.py", line 85, in create_run
+trainer_1        |     return self.store.create_run(
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/store/file_store.py", line 360, in create_run
+trainer_1        |     experiment = self.get_experiment(experiment_id)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/store/file_store.py", line 270, in get_experiment
+trainer_1        |     experiment = self._get_experiment(experiment_id)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/store/file_store.py", line 245, in _get_experiment
+trainer_1        |     raise MlflowException("Could not find experiment with ID %s" % experiment_id,
+trainer_1        | mlflow.exceptions.MlflowException: Could not find experiment with ID 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ine 369, in run_asgi
+trainer_1        |     result = await app(self.scope, self.receive, self.send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 59, in __call__
+trainer_1        |     return await self.app(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 208, in __call__
+trainer_1        |     await super().__call__(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+trainer_1        |     await self.middleware_stack(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+trainer_1        |     raise exc from None
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+trainer_1        |     await self.app(scope, receive, _send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+trainer_1        |     raise exc from None
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+trainer_1        |     await self.app(scope, receive, sender)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 580, in __call__
+trainer_1        |     await route.handle(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 241, in handle
+trainer_1        |     await self.app(scope, receive, send)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 52, in app
+trainer_1        |     response = await func(request)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 219, in app
+trainer_1        |     raw_response = await run_endpoint_function(
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 154, in run_endpoint_function
+trainer_1        |     return await run_in_threadpool(dependant.call, **values)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/starlette/concurrency.py", line 40, in run_in_threadpool
+trainer_1        |     return await loop.run_in_executor(None, func, *args)
+trainer_1        |   File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+trainer_1        |     result = self.fn(*self.args, **self.kwargs)
+trainer_1        |   File "/app/trainer.py", line 60, in train_model
+trainer_1        |     pre_train_model(processed_df)
+trainer_1        |   File "/app/TrainModelUtility.py", line 82, in pre_train_model
+trainer_1        |     mlflow_fit_model(nb_pipeline, hashingTF, trainingData)
+trainer_1        |   File "/app/TrainModelUtility.py", line 26, in mlflow_fit_model
+trainer_1        |     mlflow.mleap.log_model(spark_model=model, sample_input=trainingData, artifact_path="models")
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/utils/annotations.py", line 58, in wrapper
+trainer_1        |     return func(**kwargs)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/mleap.py", line 71, in log_model
+trainer_1        |     return Model.log(artifact_path=artifact_path, flavor=mlflow.mleap,
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/models/__init__.py", line 77, in log
+trainer_1        |     flavor.save_model(path=local_path, mlflow_model=mlflow_model, **kwargs)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/utils/annotations.py", line 58, in wrapper
+trainer_1        |     return func(**kwargs)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/mleap.py", line 93, in save_model
+trainer_1        |     add_to_model(mlflow_model=mlflow_model, path=path, spark_model=spark_model,
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/utils/annotations.py", line 58, in wrapper
+trainer_1        |     return func(**kwargs)
+trainer_1        |   File "/usr/local/lib/python3.8/site-packages/mlflow/mleap.py", line 112, in add_to_model
+trainer_1        |     import mleap.version
+trainer_1        | ModuleNotFoundError: No module named 'mleap'
+
+
+
+

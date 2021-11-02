@@ -1,0 +1,194 @@
+Attaching to newsclassifier_trainer_1
+trainer_1        | INFO:     Uvicorn running on http://0.0.0.0:8888 (Press CTRL+C to quit)
+trainer_1        | INFO:     Started reloader process [9] using statreload
+trainer_1        | INFO:     Started server process [16]
+trainer_1        | INFO:     Waiting for application startup.
+trainer_1        | INFO:     Application startup complete.
+trainer_1        | INFO:     172.18.0.1:37332 - "GET / HTTP/1.1" 200 OK
+trainer_1        | INFO:     172.18.0.1:37332 - "GET /openapi.json HTTP/1.1" 200 OK
+trainer_1        | WARNING: An illegal reflective access operation has occurred
+trainer_1        | WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/usr/local/lib/python3.8/site-packages/pyspark/jars/spark-unsafe_2.12-3.0.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+trainer_1        | WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+trainer_1        | WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+trainer_1        | WARNING: All illegal access operations will be denied in a future release
+trainer_1        | 21/11/01 10:51:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+trainer_1        | Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+trainer_1        | Setting default log level to "WARN".
+trainer_1        | To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+trainer_1        | root
+trainer_1        |  |-- Topic: string (nullable = true)
+trainer_1        |  |-- Title: string (nullable = true)
+trainer_1        |  |-- Summary: string (nullable = true)
+trainer_1        | 
+trainer_1        | +--------------------+--------+
+trainer_1        | |             summary|   topic|
+trainer_1        | +--------------------+--------+
+trainer_1        | |Reuters - Short-s...|Business|
+trainer_1        | |Reuters - Private...|Business|
+trainer_1        | |Reuters - Soaring...|Business|
+trainer_1        | |Reuters - Authori...|Business|
+trainer_1        | |AFP - Tearaway wo...|Business|
+trainer_1        | +--------------------+--------+
+trainer_1        | only showing top 5 rows
+trainer_1        | 
+trainer_1        | +--------------------+-------+----+
+trainer_1        | |             summary|  topic|lang|
+trainer_1        | +--------------------+-------+----+
+trainer_1        | |TechWeb - News - ...|Science|  en|
+trainer_1        | |          "\""RIYADH|Science|  en|
+trainer_1        | |         "\""BAGHDAD|Science|  en|
+trainer_1        | |      "\""On Tuesday|Science|  en|
+trainer_1        | +--------------------+-------+----+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | +--------------------+--------+--------------------+
+trainer_1        | |             summary|   topic|    non_asci_summary|
+trainer_1        | +--------------------+--------+--------------------+
+trainer_1        | |Reuters - Short-s...|Business|Reuters - Short-s...|
+trainer_1        | |Reuters - Private...|Business|Reuters - Private...|
+trainer_1        | |Reuters - Soaring...|Business|Reuters - Soaring...|
+trainer_1        | |Reuters - Authori...|Business|Reuters - Authori...|
+trainer_1        | +--------------------+--------+--------------------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | +--------------------+--------+--------------------+
+trainer_1        | |             summary|   topic|  stop_words_summary|
+trainer_1        | +--------------------+--------+--------------------+
+trainer_1        | |Reuters - Short-s...|Business|Reuters - Short-s...|
+trainer_1        | |Reuters - Private...|Business|Reuters - Private...|
+trainer_1        | |Reuters - Soaring...|Business|Reuters - Soaring...|
+trainer_1        | |Reuters - Authori...|Business|Reuters - Authori...|
+trainer_1        | +--------------------+--------+--------------------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | |             summary|   topic|  stop_words_summary|     feature_summary|
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | |Reuters - Short-s...|Business|Reuters - Short-s...|reuters short sel...|
+trainer_1        | |Reuters - Private...|Business|Reuters - Private...|reuters private i...|
+trainer_1        | |Reuters - Soaring...|Business|Reuters - Soaring...|reuters soaring c...|
+trainer_1        | |Reuters - Authori...|Business|Reuters - Authori...|reuters authoriti...|
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | |             summary|   topic|     feature_summary|      tagged_summary|
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | |Reuters - Short-s...|Business|reuters short sel...| reuters short se...|
+trainer_1        | |Reuters - Private...|Business|reuters private i...| reuters private ...|
+trainer_1        | |Reuters - Soaring...|Business|reuters soaring c...| reuters soaring ...|
+trainer_1        | |Reuters - Authori...|Business|reuters authoriti...| reuters authorit...|
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | |             summary|   topic|      tagged_summary|        lemm_summary|
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | |Reuters - Short-s...|Business| reuters short se...|reuters short sel...|
+trainer_1        | |Reuters - Private...|Business| reuters private ...|reuters private i...|
+trainer_1        | |Reuters - Soaring...|Business| reuters soaring ...|reuters soar crud...|
+trainer_1        | |Reuters - Authori...|Business| reuters authorit...|reuters authority...|
+trainer_1        | +--------------------+--------+--------------------+--------------------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | +--------------------+--------+
+trainer_1        | |        lemm_summary|   topic|
+trainer_1        | +--------------------+--------+
+trainer_1        | |reuters authority...|Business|
+trainer_1        | |set gameboy micro...| Science|
+trainer_1        | |harry potter auth...|   World|
+trainer_1        | |revolution coach ...|  Sports|
+trainer_1        | +--------------------+--------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | encode column of Topic to a column of category indices
+
+
+
+
+trainer_1        | +--------+----------+
+trainer_1        | |   topic|avg(label)|
+trainer_1        | +--------+----------+
+trainer_1        | |   World|       3.0|
+trainer_1        | | Science|       2.0|
+trainer_1        | |  Sports|       1.0|
+trainer_1        | |Business|       0.0|
+trainer_1        | +--------+----------+
+trainer_1        | 
+trainer_1        | Training data set
+trainer_1        | +--------------------+-------+-----+
+trainer_1        | |        lemm_summary|  topic|label|
+trainer_1        | +--------------------+-------+-----+
+trainer_1        | |abc cross promoti...| Sports|  1.0|
+trainer_1        | |adobe system intr...|Science|  2.0|
+trainer_1        | |advanced micro de...|Science|  2.0|
+trainer_1        | |afghan government...|  World|  3.0|
+trainer_1        | +--------------------+-------+-----+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+trainer_1        | Test Data Set
+trainer_1        | +--------------------+------+-----+
+trainer_1        | |        lemm_summary| topic|label|
+trainer_1        | +--------------------+------+-----+
+trainer_1        | |afp foreign unite...| World|  3.0|
+trainer_1        | |afp swarm locusts...| World|  3.0|
+trainer_1        | |ask big name play...|Sports|  1.0|
+trainer_1        | |athens greece wom...|Sports|  1.0|
+trainer_1        | +--------------------+------+-----+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+
+
+
+
+21/11/01 11:28:18 WARN DAGScheduler: Broadcasting large task binary with size 4.1 MiB
+21/11/01 11:28:50 WARN DAGScheduler: Broadcasting large task binary with size 4.1 MiB
+21/11/01 11:33:50 WARN DAGScheduler: Broadcasting large task binary with size 12.1 MiB
+trainer_1        | +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+----------+
+trainer_1        | |lemm_summary                                                                                                                                                                        |label|prediction|
+trainer_1        | +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+----------+
+trainer_1        | |afp foreign united nation worker kidnap hold hostage afghanistan week release police official tell                                                                                  |3.0  |3.0       |
+trainer_1        | |afp swarm locusts descend cairo fertile nile delta authority insist insect pose serious threat agriculture                                                                          |3.0  |3.0       |
+trainer_1        | |ask big name player trade season knicks president isiah thomas answer eddy curry er president king guess kurt thomas                                                                |1.0  |1.0       |
+trainer_1        | |athens greece woman world cup champion germany settle bronze olympics beat sweden thursday renate lingors goal spectacular game goalkeeper silke rottenberg international appearance|1.0  |1.0       |
+trainer_1        | +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----+----------+
+trainer_1        | only showing top 4 rows
+trainer_1        | 
+
+
+
+
+
+21/11/01 11:38:36 WARN DAGScheduler: Broadcasting large task binary with size 12.1 MiB
+trainer_1        | ===Naive Bayes Metrics:===
+trainer_1        | Accuracy of NaiveBayes is = 0.896778
+trainer_1        | Test Error of NaiveBayes = 0.103222 
+21/11/01 11:38:48 WARN TaskSetManager: Stage 47 contains a task of very large size (4187 KiB). The maximum recommended task size is 1000 KiB.
+21/11/01 11:38:50 WARN TaskSetManager: Stage 50 contains a task of very large size (8368 KiB). The maximum recommended task size is 1000 KiB.
+
+
+
+
+21/11/01 11:48:22 WARN DAGScheduler: Broadcasting large task binary with size 12.1 MiB
+trainer_1        |               precision    recall  f1-score   support
+trainer_1        | 
+trainer_1        |          0.0       0.86      0.87      0.87      1876
+trainer_1        |          1.0       0.95      0.97      0.96      1782
+trainer_1        |          2.0       0.87      0.85      0.86      1863
+trainer_1        |          3.0       0.91      0.89      0.90      1684
+trainer_1        | 
+trainer_1        |     accuracy                           0.90      7205
+trainer_1        |    macro avg       0.90      0.90      0.90      7205
+trainer_1        | weighted avg       0.90      0.90      0.90      7205
+trainer_1        | 
+trainer_1        | Training Model Completed Successfully.
+trainer_1        | INFO:     172.18.0.1:37344 - "POST /train_model HTTP/1.1" 200 OK
+
+
+
+
+
+
+
+
+
